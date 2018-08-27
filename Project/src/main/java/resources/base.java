@@ -20,7 +20,7 @@ public class base {
 public WebDriver initializeDriver() throws IOException
 {
 	Properties prop=new Properties();
-	FileInputStream fis=new FileInputStream("C:\\Users\\siyabongam\\Project\\src\\main\\java\\Globalk\\data.properties");
+	FileInputStream fis=new FileInputStream("C:\\Users\\siyabongam\\git\\WebUI_Automation\\Project\\src\\main\\java\\resources\\data.properties");
 	
 	prop.load(fis);
 	String browserName=prop.getProperty("browser");
@@ -36,12 +36,14 @@ public WebDriver initializeDriver() throws IOException
 	{
 		System.setProperty("webdriver.firefox.marionette", "C:\\Users\\siyabongam\\Project\\src\\browserDrivers\\geckodriver.exe");
 		driver=new FirefoxDriver();
+		driver.manage().window().maximize();
 		//execute in Firefox browser
 	}
 	else if (browserName.equals("Edge"))	
 	{
 		System.setProperty("webdriver.edge.driver", "C:\\Users\\siyabongam\\Project\\src\\browserDrivers\\MicrosoftWebDriver.exe");
 		driver=new EdgeDriver();
+		driver.manage().window().maximize();
 		//execute in Microsoft Edge browser
 	}
 	

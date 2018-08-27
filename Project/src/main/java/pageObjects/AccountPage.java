@@ -8,7 +8,7 @@ public class AccountPage {
 	
 	public WebDriver driver;
 	
-	By title=By.xpath("//h1[@class='page-heading']");
+	By title=By.xpath("//html[1]/body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/h1[1]");
 	
 	public AccountPage(WebDriver driver) {
 		
